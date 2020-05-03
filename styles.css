@@ -4,7 +4,11 @@
   --maxBaseFontSize: 3rem;
   --baseFontSize: clamp(var(--minBaseFontSize), 2.5vw, var(--maxBaseFontSize));
   --baseFontFamily: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', sans-serif;
-  --pagePadding: calc(var(--unit) * 2);
+  --pagePadding: var(--space-m);
+
+  --space-s: var(--unit);
+  --space-m: calc(var(--space-s) + var(--space-s));
+  --space-l: calc(var(--space-s) + var(--space-m));
 }
 
 *, *:before, *:after {
@@ -44,4 +48,8 @@ ul {
 
 .sectionTitle {
   margin-bottom: 0;
+}
+
+.linksListItem + .linksListItem {
+  margin-top: var(--unit);
 }

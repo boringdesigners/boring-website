@@ -3,7 +3,8 @@
   --minBaseFontSize: 1.5rem;
   --maxBaseFontSize: 3rem;
   --baseFontSize: clamp(var(--minBaseFontSize), 2.5vw, var(--maxBaseFontSize));
-  --baseFontFamily: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', sans-serif;
+  --baseFontFamily: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Segoe UI", sans-serif;
   --pagePadding: var(--space-m);
 
   --space-s: var(--unit);
@@ -11,7 +12,9 @@
   --space-l: calc(var(--space-s) + var(--space-m));
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -26,7 +29,11 @@ body {
   padding: var(--pagePadding);
 
   -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
 }
 
 a {
@@ -34,7 +41,12 @@ a {
   text-underline-position: under;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: inherit;
 }
 
@@ -42,8 +54,27 @@ ul {
   margin: unset;
 }
 
+.mt-s {
+  margin-top: var(--space-s);
+}
+.mt-m {
+  margin-top: var(--space-m);
+}
+.mt-l {
+  margin-top: var(--space-l);
+}
+
+.mainHeader {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
 .mainTitle {
   margin-top: 0;
+}
+
+.mainHeaderLink {
+  text-decoration: none;
 }
 
 .sectionTitle {
@@ -52,4 +83,8 @@ ul {
 
 .linksListItem + .linksListItem {
   margin-top: var(--unit);
+}
+
+.aboutPicture {
+  max-width: 1000px;
 }

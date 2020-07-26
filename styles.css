@@ -41,6 +41,10 @@ a {
   text-underline-position: under;
 }
 
+p {
+  margin: 0;
+}
+
 h1,
 h2,
 h3,

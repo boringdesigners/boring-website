@@ -53,10 +53,6 @@ h6 {
   font-size: inherit;
 }
 
-ul {
-  margin: unset;
-}
-
 .mt-s {
   margin-top: var(--space-s);
 }
